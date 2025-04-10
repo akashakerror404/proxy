@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import { Routes, Route } from 'react-router-dom'; // ✅ Remove 'Router'
 import './App.css';
+import HomeHeader from './Pages/Home/HomeHeader';
+import Gallery from './Pages/Gallery/Gallery';
+import Packages from './Pages/Packages/Packages';
+import OurTeam from './Pages/OurTeam/OurTeam';
+import About from './Pages/About/About';
+import Navbar from './Pages/NavBar/Navbar';
+import Chatboat from './Pages/chatboat/Chatboat';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar/>
+      <Chatboat></Chatboat>
+      <Routes>
+        <Route path="/" element={<HomeHeader />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/packages" element={<Packages />} />
+        <Route path="/our-team" element={<OurTeam />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
     </div>
   );
 }
