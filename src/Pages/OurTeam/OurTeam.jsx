@@ -1,36 +1,65 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import OUR_TEAM1 from '../../assets/OUR_TEAM/OUR_TEAM1.jpg';
+import OUR_TEAM2 from '../../assets/OUR_TEAM/OUR_TEAM2.jpg';
+import OUR_TEAM3 from '../../assets/OUR_TEAM/OUR_TEAM3.jpg';
+import OUR_TEAM4 from '../../assets/OUR_TEAM/OUR_TEAM4.jpg';
+import OUR_TEAM5 from '../../assets/OUR_TEAM/OUR_TEAM5.jpg';
+import OUR_TEAM6 from '../../assets/OUR_TEAM/OUR_TEAM6.jpg';
+
 
 function OurTeam() {
   const teamMembers = [
     {
-      name: "Sarah Johnson",
+      name: "Akash Ak",
       role: "Lead Photographer",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
-      description: "With over 10 years of experience in wedding photography, Sarah has a keen eye for capturing those perfect moments that tell your unique love story.",
-      specialties: ["Wedding Photography", "Couple Portraits", "Creative Direction"]
-    },
-    {
-      name: "Michael Chen", 
-      role: "Senior Photographer",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
-      description: "Michael's artistic vision and technical expertise allow him to create stunning compositions that bring out the natural beauty in every shot.",
-      specialties: ["Landscape Photography", "Architecture", "Natural Light"]
-    },
-    {
-      name: "Emily Rodriguez",
-      role: "Portrait Specialist",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80",
-      description: "Emily specializes in making subjects feel comfortable and natural in front of the camera, resulting in authentic and emotional portraits.",
-      specialties: ["Portrait Photography", "Family Sessions", "Fashion"]
-    },
-    {
-      name: "David Kim",
-      role: "Videographer",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
-      description: "David brings stories to life through his cinematic approach to wedding videography, creating beautiful films that capture your special day.",
-      specialties: ["Wedding Films", "Drone Photography", "Video Editing"]
+      image: OUR_TEAM4,
+      description: "Akash brings unmatched passion and precision to every event he captures, having covered over 150 weddings and turning special moments into timeless memories.",
+      specialties: ["Wedding Photography", "Creative Portraits", "Fashion", "Event Coverage", "Portrait Photography"]
     }
+    
+    ,
+    {
+      name: "Dinoop",
+      role: "Photographer",
+      image: OUR_TEAM2,
+      description: "Dinoop specializes in product photography and ad shoots, delivering sharp visuals that elevate brand stories with creative precision.",
+      specialties: ["Product Photography", "Ad Shoots", "Creative Lighting"]
+    },
+    
+    
+    {
+      name: "Asnayin",
+      role: "Wedding Specialist",
+      image: OUR_TEAM3, // Replace with the correct image if needed
+      description: "Asnayin is passionate about capturing the beauty, joy, and emotions of weddings. With a creative approach and attention to detail, she ensures every moment is preserved with elegance.",
+      specialties: ["Wedding Photography", "Candid Moments", "Pre-Wedding Shoots"]
+    }
+    ,
+    {
+      name: "Jayeesh",
+      role: "Wedding Specialist",
+      image: OUR_TEAM5, // Replace with the correct image if needed
+      description: "Jayeesh is a dedicated wedding specialist and the main constant at all our wedding events. His deep understanding of ceremonies and eye for emotion ensures every moment is beautifully documented.",
+      specialties: ["Wedding Photography", "Traditional Ceremonies", "Event Coverage"]
+    }
+    ,
+    {
+      name: "Sreeraj",
+      role: "Photographer & Video Editor",
+      image: OUR_TEAM1, // Replace with the correct image if needed
+      description: "Sreeraj combines his skills in photography and video editing to craft visually compelling stories. From capturing the shot to perfecting the final edit, he delivers high-quality visual content every time.",
+      specialties: ["Photography", "Video Editing", "Post-Production"]
+    }
+    ,
+    {
+      name: "Jithin Raj",
+      role: "Wedding Photographer",
+      image: OUR_TEAM6, // Replace with the correct image if needed
+      description: "Jithin Raj specializes in wedding photography, capturing timeless moments with a blend of elegance and emotion. His work tells heartfelt stories that couples cherish forever.",
+      specialties: ["Wedding Photography", "Candid Shots", "Couple Portraits"]
+    },
+
   ]
 
   return (

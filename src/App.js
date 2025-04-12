@@ -7,6 +7,7 @@ import OurTeam from './Pages/OurTeam/OurTeam';
 import About from './Pages/About/About';
 import Navbar from './Pages/NavBar/Navbar';
 import Chatboat from './Pages/chatboat/Chatboat';
+import Test from './Pages/Test/Test';
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
       <Navbar/>
       <Chatboat></Chatboat>
       <Routes>
+      {/* <Route path="/" element={<Test />} /> */}
+
+      
         <Route path="/" element={<HomeHeader />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/packages" element={<Packages />} />
