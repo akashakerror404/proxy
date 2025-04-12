@@ -25,17 +25,7 @@ import Test from '../Test/Test';
 
 
 const HERO_IMAGES = [hero1,hero2,hero3,hero4,hero5,hero6,hero7,]
-
 const WEDDING_IMAGES = [wed01, wed02, wed03, wed04, wed05, wed06];
-
-
-// const COUPLE_IMAGES = [
-//   'https://images.unsplash.com/photo-1583939411023-14783179e581',
-//   'https://images.unsplash.com/photo-1591604466107-ec97de577aff',
-//   'https://images.unsplash.com/photo-1519741497674-611481863552',
-//   'https://images.unsplash.com/photo-1519225421980-715cb0215aed'
-// ]
-
 const TESTIMONIALS = [
   {
     name: 'Sudeesh & Rinchy',

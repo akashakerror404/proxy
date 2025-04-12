@@ -1,5 +1,13 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import PLATINUM from '../../assets/PACKAGES/WEDDING/PLATINUM.pdf'
+import DIAMOND from '../../assets/PACKAGES/WEDDING/DIAMOND.pdf'
+import GOLD from '../../assets/PACKAGES/WEDDING/GOLD.pdf'
+
+
+import ENGAGEMENTPLATINUM from '../../assets/PACKAGES/ENGAGEMENT/PLATINUM.pdf'
+import ENGAGEMENTDIAMOND from '../../assets/PACKAGES/ENGAGEMENT/DIAMOND.pdf'
+import ENGAGEMENTGOLD from '../../assets/PACKAGES/ENGAGEMENT/GOLD.pdf'
 
 function Chatboat() {
   const [isChatOpen, setIsChatOpen] = useState(false)
@@ -11,35 +19,35 @@ function Chatboat() {
     { 
       name: 'Wedding',
       packages: [
-        {name: 'Platinum Package', pdf: '/pdfs/wedding-platinum.pdf'},
-        {name: 'Diamond Package', pdf: '/pdfs/wedding-diamond.pdf'},
-        {name: 'Gold Package', pdf: '/pdfs/wedding-gold.pdf'}
+        {name: 'Platinum Package', pdf: PLATINUM},
+        {name: 'Diamond Package', pdf: DIAMOND},
+        {name: 'Gold Package', pdf: GOLD}
       ]
     },
     {
       name: 'Engagement',
       packages: [
-        {name: 'Premium Package', pdf: '/pdfs/engagement-premium.pdf'},
-        {name: 'Classic Package', pdf: '/pdfs/engagement-classic.pdf'}, 
-        {name: 'Basic Package', pdf: '/pdfs/engagement-basic.pdf'}
+        {name: 'Premium Package', pdf: ENGAGEMENTPLATINUM},
+        {name: 'Exclusive Package', pdf: ENGAGEMENTDIAMOND}, 
+        {name: 'Classic Package', pdf: ENGAGEMENTGOLD}
       ]
     },
-    {
-      name: 'Baby Shoot',
-      packages: [
-        {name: 'Newborn Special', pdf: '/pdfs/baby-newborn.pdf'},
-        {name: 'Monthly Milestone', pdf: '/pdfs/baby-milestone.pdf'},
-        {name: 'Family Package', pdf: '/pdfs/baby-family.pdf'}
-      ]
-    },
-    {
-      name: 'Model Shoot', 
-      packages: [
-        {name: 'Portfolio Pro', pdf: '/pdfs/model-portfolio.pdf'},
-        {name: 'Fashion Package', pdf: '/pdfs/model-fashion.pdf'},
-        {name: 'Basic Shoot', pdf: '/pdfs/model-basic.pdf'}
-      ]
-    }
+    // {
+    //   name: 'Baby Shoot',
+    //   packages: [
+    //     {name: 'Newborn Special', pdf: '/pdfs/baby-newborn.pdf'},
+    //     {name: 'Monthly Milestone', pdf: '/pdfs/baby-milestone.pdf'},
+    //     {name: 'Family Package', pdf: '/pdfs/baby-family.pdf'}
+    //   ]
+    // },
+    // {
+    //   name: 'Model Shoot', 
+    //   packages: [
+    //     {name: 'Portfolio Pro', pdf: '/pdfs/model-portfolio.pdf'},
+    //     {name: 'Fashion Package', pdf: '/pdfs/model-fashion.pdf'},
+    //     {name: 'Basic Shoot', pdf: '/pdfs/model-basic.pdf'}
+    //   ]
+    // }
   ]
 
   const handleOptionClick = (option) => {
@@ -85,7 +93,7 @@ function Chatboat() {
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            className="absolute bottom-16 right-0 w-96 bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100"
+            className="absolute bottom-16 md:right-0 right-[0px]  md:w-96 w-[350px] bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100"
           >
             <div className="p-6 bg-gradient-to-r from-[#328E6E] to-[#67AE6E] text-white rounded-t-xl flex justify-between items-center">
               <div>
@@ -147,6 +155,7 @@ function Chatboat() {
                         </button>
                       </motion.div>
                     ))}
+                    
                   </div>
                 </>
               )}
