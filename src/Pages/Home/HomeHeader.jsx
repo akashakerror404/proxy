@@ -28,7 +28,7 @@ const HERO_IMAGES = [hero1,hero2,hero3,hero4,hero5,hero6,hero7,]
 const WEDDING_IMAGES = [wed01, wed02, wed03, wed04, wed05, wed06];
 const TESTIMONIALS = [
   {
-    name: 'Sudeesh & Rinchy',
+    name: 'Sudeesh & Rincy',
     image: TESTIMONIALS01,
     text: '"Our engagement was nothing short of perfect. From breathtaking décor to the magical atmosphere, every detail was flawlessly executed. Luvit Weds didn’t just plan our day — they created a masterpiece.',
     type: 'Engagement',
