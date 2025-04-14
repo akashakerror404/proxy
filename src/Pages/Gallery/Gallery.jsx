@@ -265,7 +265,7 @@ function Gallery() {
       }}
       className="h-full"
     >
-      {galleryImagessectionone.slice(0, 6).map((image, index) => (
+      {galleryImagessectionone.slice(0, 7).map((image, index) => (
         <SwiperSlide key={`desktop-${index}`}>
           <motion.div 
             className="h-full w-full relative overflow-hidden rounded-lg"
@@ -323,7 +323,7 @@ function Gallery() {
       }}
       className="h-full"
     >
-      {galleryImagessectionone.slice(0, 4).map((image, index) => (
+      {galleryImagessectionone.slice(0, 7).map((image, index) => (
         <SwiperSlide key={`mobile-${index}`}>
           <div className="h-full w-full relative overflow-hidden">
             <img 
