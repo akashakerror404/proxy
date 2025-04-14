@@ -1,17 +1,20 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useNavigate } from 'react-router-dom';
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const navigate = useNavigate();
 
   const menuItems = ['Home', 'Gallery', 'Packages', 'About', 'Our Team']
 
   return (
     <div className="bg-white">
       {/* Company Logo */}
-      <div className="fixed top-4 left-4 z-50">
-        <h1 className="text-3xl font-playfair text-[#328E6E] font-bold tracking-wider">
+      <div className="fixed top-4 left-4 z-50 cursor-pointer" >
+        <h1 className="text-3xl font-playfair text-[#328E6E] font-bold tracking-wider"
+        onClick={() => navigate('/')}>
           LUVIT <span className="text-[#67AE6E]">WEDS</span>
         </h1>
         <p className="text-sm text-gray-600 font-montserrat mt-1">Creating Timeless Memories</p>

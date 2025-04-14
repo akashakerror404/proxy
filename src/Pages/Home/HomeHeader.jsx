@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useNavigate } from 'react-router-dom';
+
 import hero1 from '../../assets/HERO_IMAGES/hero1.jpg';
 import hero2 from '../../assets/HERO_IMAGES/hero2.jpg';
 import hero3 from '../../assets/HERO_IMAGES/hero3.jpg';
@@ -59,8 +61,10 @@ const TESTIMONIALS = [
   }
 ]
 
+
 function HomeHeader() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const navigate = useNavigate();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -138,19 +142,21 @@ function HomeHeader() {
                   whileHover={{ scale: 1.05, backgroundColor: '#67AE6E' }}
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-[#328E6E] text-white text-lg rounded-full font-montserrat transition-all duration-300 shadow-lg flex items-center gap-2"
-                >
+                  onClick={() => navigate('/packages')}
+>
                   Start Planning
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05, backgroundColor: '#E1EEBC', borderColor: '#E1EEBC' }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border-2 border-white text-white text-lg rounded-full font-montserrat hover:text-[#328E6E] transition-all duration-300 shadow-lg"
-                >
-                  Explore Our Work
-                </motion.button>
+      whileHover={{ scale: 1.05, backgroundColor: '#E1EEBC', borderColor: '#E1EEBC' }}
+      whileTap={{ scale: 0.95 }}
+      onClick={() => navigate('/gallery')}
+      className="px-8 py-4 border-2 border-white text-white text-lg rounded-full font-montserrat hover:text-[#328E6E] transition-all duration-300 shadow-lg"
+    >
+      Explore Our Work
+    </motion.button>
               </motion.div>
             </div>
           </div>
