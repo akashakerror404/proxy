@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation as SwiperNavigation, Pagination as SwiperPagination, Autoplay as SwiperAutoplay, EffectCoverflow as SwiperEffectCoverflow } from 'swiper/modules'
+import { Navigation as SwiperNavigation, Pagination as SwiperPagination, Autoplay as SwiperAutoplay, EffectCoverflow as SwiperEffectCoverflow ,EffectCreative as SwiperEffectCreative} from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
@@ -198,52 +198,197 @@ function Gallery() {
       </div>
 
       {/* Hero Section with Slider */}
-      <section className="h-[80vh] relative overflow-hidden">
-        <Swiper
-          modules={[SwiperNavigation, SwiperPagination, SwiperAutoplay, SwiperEffectCoverflow]}
-          effect="coverflow"
-          centeredSlides={true}
-          slidesPerView={1.5}
-          loop={true}
-          autoplay={{ delay: 3000 }}
-          coverflowEffect={{
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true,
-          }}
-          pagination={{ clickable: true }}
-          className="h-full"
-        >
-          {galleryImagessectionone.slice(0, 8).map((image, index) => (
-            <SwiperSlide key={index}>
-              <div className="h-full w-full relative">
-                <img 
-                  src={image}
-                  alt={`Featured Wedding ${index + 1}`}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-        
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="absolute inset-0 flex items-center justify-center z-10"
-        >
-          <div className="text-center text-white">
-            <h1 className="text-7xl font-playfair mb-8 text-shadow-lg">Our Masterpieces</h1>
-            <p className="text-2xl font-montserrat max-w-3xl mx-auto leading-relaxed text-shadow">
-              Each moment captured tells a unique story of love, elegance, and celebration
-            </p>
+      <section className="h-[90vh] md:h-[100vh] relative overflow-hidden">
+  {/* Background Overlay */}
+  <div className="absolute inset-0 bg-black/20 z-0" />
+  
+  {/* Floating Petals Decoration */}
+  <div className="absolute inset-0 overflow-hidden z-0">
+    {[...Array(15)].map((_, i) => (
+      <motion.div
+        key={`petal-${i}`}
+        initial={{ opacity: 0, y: -20, x: Math.random() * 100 }}
+        animate={{
+          opacity: [0, 0.6, 0],
+          y: [0, window.innerHeight],
+          x: Math.random() * 100 - 50,
+          rotate: Math.random() * 360
+        }}
+        transition={{
+          duration: 10 + Math.random() * 10,
+          repeat: Infinity,
+          delay: Math.random() * 5,
+          ease: "linear"
+        }}
+        className="absolute text-white/30"
+        style={{
+          fontSize: `${10 + Math.random() * 20}px`,
+          left: `${Math.random() * 100}%`,
+          top: `-10%`
+        }}
+      >
+        ❦
+      </motion.div>
+    ))}
+  </div>
+
+  {/* Desktop Swiper */}
+  <div className="hidden md:block h-full w-full">
+    <Swiper
+      modules={[SwiperNavigation, SwiperPagination, SwiperAutoplay, SwiperEffectCreative]}
+      effect="creative"
+      creativeEffect={{
+        prev: {
+          shadow: true,
+          translate: [0, 0, -400],
+          opacity: 0
+        },
+        next: {
+          translate: ["100%", 0, 0],
+          opacity: 0
+        }
+      }}
+      centeredSlides={true}
+      slidesPerView={1.2}
+      loop={true}
+      speed={1200}
+      autoplay={{ delay: 3500, disableOnInteraction: false }}
+      pagination={{ 
+        clickable: true,
+        renderBullet: (index, className) => {
+          return `<span class="${className} bg-white !w-3 !h-3 !mx-1.5 !opacity-50"></span>`;
+        }
+      }}
+      navigation={{
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }}
+      className="h-full"
+    >
+      {galleryImagessectionone.slice(0, 6).map((image, index) => (
+        <SwiperSlide key={`desktop-${index}`}>
+          <motion.div 
+            className="h-full w-full relative overflow-hidden rounded-lg"
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.5 }}
+          >
+            <img 
+              src={image}
+              alt={`Featured Wedding ${index + 1}`}
+              className="w-full h-full object-cover transform transition-transform duration-700 hover:scale-105"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+            <div className="absolute bottom-8 left-8 text-white">
+              <motion.p 
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.3 }}
+                className="font-montserrat text-sm tracking-widest"
+              >
+                WEDDING STORY {index + 1}
+              </motion.p>
+              <motion.h3 
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.5 }}
+                className="font-playfair text-3xl mt-2"
+              >
+                {["Eternal Love", "Timeless Elegance", "Romantic Bliss", "Dream Wedding", "Golden Moment", "Fairytale Day"][index]}
+              </motion.h3>
+            </div>
+          </motion.div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+    
+    {/* Custom Navigation Arrows */}
+    <div className="swiper-button-next !text-white !right-12 after:!text-2xl" />
+    <div className="swiper-button-prev !text-white !left-12 after:!text-2xl" />
+  </div>
+
+  {/* Mobile Swiper */}
+  <div className="md:hidden h-full w-full">
+    <Swiper
+      modules={[SwiperPagination, SwiperAutoplay]}
+      slidesPerView={1}
+      loop={true}
+      speed={1000}
+      autoplay={{ delay: 3000, disableOnInteraction: false }}
+      pagination={{ 
+        clickable: true,
+        renderBullet: (index, className) => {
+          return `<span class="${className} bg-white !w-2 !h-2 !mx-1 !opacity-50"></span>`;
+        }
+      }}
+      className="h-full"
+    >
+      {galleryImagessectionone.slice(0, 4).map((image, index) => (
+        <SwiperSlide key={`mobile-${index}`}>
+          <div className="h-full w-full relative overflow-hidden">
+            <img 
+              src={image}
+              alt={`Featured Wedding ${index + 1}`}
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+            <div className="absolute bottom-6 left-6 text-white">
+              <p className="font-montserrat text-xs tracking-widest">
+                WEDDING STORY {index + 1}
+              </p>
+              <h3 className="font-playfair text-xl mt-1">
+                {["Eternal Love", "Timeless", "Romantic", "Dream Day"][index]}
+              </h3>
+            </div>
           </div>
-        </motion.div>
-      </section>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  </div>
+  
+  {/* Main Title */}
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8 }}
+    className="absolute inset-0 flex flex-col items-center justify-center z-10 px-4 pointer-events-none"
+  >
+    <div className="text-center text-white max-w-4xl mx-auto">
+      <motion.div
+        initial={{ scale: 0.9 }}
+        animate={{ scale: 1 }}
+        transition={{ delay: 0.5, type: "spring" }}
+        className="mb-6 md:mb-10"
+      >
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-playfair font-bold mb-4 text-shadow-lg">
+          Our <span className="text-gold-400">Masterpieces</span>
+        </h1>
+        <div className="w-24 h-1 bg-white/80 mx-auto" />
+      </motion.div>
+      
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.8 }}
+        className="text-sm sm:text-base md:text-lg lg:text-xl font-montserrat font-light tracking-wider leading-relaxed text-shadow"
+      >
+        Where every frame whispers a love story, every glance holds eternity, and every moment becomes art
+      </motion.p>
+      
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.2 }}
+        className="mt-8 md:mt-12"
+      >
+        <button className="pointer-events-auto px-8 py-3 bg-transparent border border-white/50 text-white font-montserrat text-sm tracking-widest hover:bg-white/10 transition-all duration-300 hover:border-white/80">
+          VIEW GALLERY
+        </button>
+      </motion.div>
+    </div>
+  </motion.div>
+</section>
 
       {/* Gallery Grid */}
       <section className="py-20 px-4">
