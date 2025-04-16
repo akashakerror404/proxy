@@ -6,6 +6,8 @@ import OUR_TEAM3 from '../../assets/OUR_TEAM/OUR_TEAM3.jpg';
 import OUR_TEAM4 from '../../assets/OUR_TEAM/OUR_TEAM4.jpg';
 import OUR_TEAM5 from '../../assets/OUR_TEAM/OUR_TEAM5.jpg';
 import OUR_TEAM6 from '../../assets/OUR_TEAM/OUR_TEAM6.jpg';
+import OUR_TEAM7 from '../../assets/OUR_TEAM/OUR_TEAM7.jpg';
+
 
 
 function OurTeam() {
@@ -50,8 +52,15 @@ function OurTeam() {
       image: OUR_TEAM1, // Replace with the correct image if needed
       description: "Sreeraj combines his skills in photography and video editing to craft visually compelling stories. From capturing the shot to perfecting the final edit, he delivers high-quality visual content every time.",
       specialties: ["Photography", "Video Editing", "Post-Production"]
-    }
-    ,
+    },
+    {
+      name: "Avinsh",
+      role: "Wedding & Celebrity Photographer",
+      image: OUR_TEAM7, // Replace with the correct image if needed
+      description: "Avinsh is renowned for his expertise in wedding, celebrity, and model shoots, blending artistic flair with professional precision. His lens captures glamour, grace, and unforgettable moments.",
+      specialties: ["Wedding Photography", "Celebrity Shoots", "Model Portfolio"]
+    },
+    
     {
       name: "Jithin Raj",
       role: "Wedding Photographer",
@@ -59,6 +68,8 @@ function OurTeam() {
       description: "Jithin Raj specializes in wedding photography, capturing timeless moments with a blend of elegance and emotion. His work tells heartfelt stories that couples cherish forever.",
       specialties: ["Wedding Photography", "Candid Shots", "Couple Portraits"]
     },
+
+    
 
   ]
 
