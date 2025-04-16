@@ -1,13 +1,18 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState,useEffect } from 'react'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { useNavigate } from 'react-router-dom';
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const navigate = useNavigate();
+  const location = useLocation()
+  const [istrue, setistrue] = useState(false)
 
   const menuItems = ['Home', 'Gallery', 'Packages', 'About', 'Our Team']
+  useEffect(() => {
+    setistrue(location.pathname === '/');
+  }, [location.pathname]);
+  
 
   return (
     <div className="bg-white">
@@ -17,7 +22,8 @@ function Navbar() {
         onClick={() => navigate('/')}>
           LUVIT <span className="text-[#67AE6E]">WEDS</span>
         </h1>
-        <p className="text-sm text-gray-600 font-montserrat mt-1">Creating Timeless Memories</p>
+        {istrue && <p className="text-sm text-gray-600 font-montserrat mt-1">Creating Timeless Memories</p>}
+       
       </div>
 
       {/* Menu Button */}
