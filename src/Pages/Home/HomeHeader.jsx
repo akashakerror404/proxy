@@ -105,14 +105,14 @@ function HomeHeader() {
         <div className="relative h-full flex items-center">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div className="max-w-3xl">
-              <motion.span
+             {/* <motion.span
                 initial={{ y: 50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 1, delay: 0.3 }}
                 className="text-[#E1EEBC] text-xl mb-4 block font-montserrat"
               >
                 Welcome to Luxury Wedding Planning
-              </motion.span>
+              </motion.span> */}
               
               <motion.h1 
                 initial={{ y: 100, opacity: 0 }}
