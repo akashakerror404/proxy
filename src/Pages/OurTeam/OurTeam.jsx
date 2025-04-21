@@ -12,15 +12,7 @@ import OUR_TEAM7 from '../../assets/OUR_TEAM/OUR_TEAM7.jpg';
 
 function OurTeam() {
   const teamMembers = [
-    {
-      name: "Akash Ak",
-      role: "Lead Photographer",
-      image: OUR_TEAM4,
-      description: "Akash brings unmatched passion and precision to every event he captures, having covered over 150 weddings and turning special moments into timeless memories.",
-      specialties: ["Wedding Photography", "Creative Portraits", "Fashion", "Event Coverage", "Portrait Photography"]
-    }
-    
-    ,
+
     {
       name: "Dinoop",
       role: "Photographer",
@@ -28,7 +20,15 @@ function OurTeam() {
       description: "Dinoop specializes in product photography and ad shoots, delivering sharp visuals that elevate brand stories with creative precision.",
       specialties: ["Product Photography", "Ad Shoots", "Creative Lighting"]
     },
+    {
+      name: "Akash Ak",
+      role: "Photographer",
+      image: OUR_TEAM4,
+      description: "Akash brings unmatched passion and precision to every event he captures, having covered over 150 weddings and turning special moments into timeless memories.",
+      specialties: ["Wedding Photography", "Creative Portraits", "Fashion", "Event Coverage", "Portrait Photography"]
+    }
     
+    ,
     
     {
       name: "Asnayin",
