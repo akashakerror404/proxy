@@ -8,7 +8,7 @@ import About from './Pages/About/About';
 import Navbar from './Pages/NavBar/Navbar';
 import Chatboat from './Pages/chatboat/Chatboat';
 import Test from './Pages/Test/Test';
-
+import { Analytics } from "@vercel/analytics/react"
 function App() {
   return (
     <div className="App">
@@ -24,6 +24,8 @@ function App() {
         <Route path="/our-team" element={<OurTeam />} />
         <Route path="/about" element={<About />} />
       </Routes>
+      <Analytics />
+
     </div>
   );
 }
