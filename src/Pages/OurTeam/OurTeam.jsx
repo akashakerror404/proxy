@@ -14,7 +14,7 @@ function OurTeam() {
   const teamMembers = [
 
     {
-      name: "Dinoop",
+      name: "Sujil",
       role: "Photographer",
       image: OUR_TEAM2,
       description: "Dinoop specializes in product photography and ad shoots, delivering sharp visuals that elevate brand stories with creative precision.",
