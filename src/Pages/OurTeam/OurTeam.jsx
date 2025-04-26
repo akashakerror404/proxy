@@ -81,7 +81,7 @@ function OurTeam() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl font-playfair text-[#328E6E] mb-4">Meet Our Photography Team</h1>
+          <h1 className="text-4xl font-playfair text-[#A1D6B2] mb-4">Meet Our Photography Team</h1>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Our talented team of photographers and videographers are passionate about capturing your precious moments in the most beautiful way possible.
           </p>
@@ -104,7 +104,7 @@ function OurTeam() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-playfair text-[#328E6E] mb-2">{member.name}</h3>
+                <h3 className="text-xl font-playfair text-[#A1D6B2] mb-2">{member.name}</h3>
                 <p className="text-[#67AE6E] font-medium mb-3">{member.role}</p>
                 <p className="text-gray-600 text-sm mb-4">{member.description}</p>
                 <div className="space-y-2">

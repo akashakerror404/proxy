@@ -184,11 +184,11 @@ function Gallery() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-[#F8FAF0]">
+    <div className="min-h-screen bg-gradient-to-b from-white to-[#A1D6B2]">
       {/* Header Section */}
       <div className="pt-20 pb-12 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-playfair text-[#328E6E] mb-6">
+          <h1 className="text-5xl md:text-6xl font-playfair text-[#A1D6B2] mb-6">
             Wedding Gallery
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 font-montserrat leading-relaxed">
@@ -471,7 +471,7 @@ function Gallery() {
           <button 
             onClick={loadMoreImages}
             disabled={isLoading}
-            className="px-16 py-6 bg-[#328E6E] text-white text-2xl rounded-full font-montserrat hover:bg-[#67AE6E] transition-all duration-500 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="px-16 py-6 bg-[#A1D6B2] text-white text-2xl rounded-full font-montserrat hover:bg-[#67AE6E] transition-all duration-500 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {isLoading ? 'Loading...' : 'Explore More Stories'}
           </button>

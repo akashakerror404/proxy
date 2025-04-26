@@ -85,14 +85,14 @@ function Packages() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-[#F8FAF0] py-20">
+    <div className="min-h-screen bg-gradient-to-b from-white to-[#A1D6B2] py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <h1 className="text-5xl md:text-6xl font-playfair text-[#328E6E] mb-6 drop-shadow-lg">
+          <h1 className="text-5xl md:text-6xl font-playfair text-[#A1D6B2] mb-6 drop-shadow-lg">
             Our Packages
           </h1>
           <p className="text-xl text-gray-600 font-montserrat max-w-3xl mx-auto leading-relaxed">
@@ -105,7 +105,7 @@ function Packages() {
           <motion.h2 
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            className="text-3xl font-playfair text-[#328E6E] mb-8 drop-shadow-md"
+            className="text-3xl font-playfair text-[#A1D6B2] mb-8 drop-shadow-md"
           >
             Wedding Packages
           </motion.h2>
@@ -127,12 +127,12 @@ function Packages() {
                   />
                 </div>
                 <div className="p-8">
-                  <h3 className="text-2xl font-playfair text-[#328E6E] mb-4">{pkg.name}</h3>
+                  <h3 className="text-2xl font-playfair text-[#A1D6B2] mb-4">{pkg.name}</h3>
                   <p className="text-gray-600 mb-4 min-h-[60px]">{pkg.description}</p>
                   <p className="text-2xl font-playfair text-[#67AE6E] mb-6">{pkg.price}</p>
                   <a 
                     href={pkg.pdf}
-                    className="inline-block bg-[#328E6E] text-white px-6 py-3 rounded-full hover:bg-[#67AE6E] transition-colors duration-300 shadow-md hover:shadow-lg"
+                    className="inline-block bg-[#A1D6B2] text-white px-6 py-3 rounded-full hover:bg-[#67AE6E] transition-colors duration-300 shadow-md hover:shadow-lg"
                     download
                   >
                     Download Details
@@ -149,7 +149,7 @@ function Packages() {
           <motion.h2 
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            className="text-3xl font-playfair text-[#328E6E] mb-8 drop-shadow-md"
+            className="text-3xl font-playfair text-[#A1D6B2] mb-8 drop-shadow-md"
           >
            Engagement Packages
           </motion.h2>
@@ -171,12 +171,12 @@ function Packages() {
                   />
                 </div>
                 <div className="p-8">
-                  <h3 className="text-2xl font-playfair text-[#328E6E] mb-4">{pkg.name}</h3>
+                  <h3 className="text-2xl font-playfair text-[#A1D6B2] mb-4">{pkg.name}</h3>
                   <p className="text-gray-600 mb-4 min-h-[60px]">{pkg.description}</p>
                   <p className="text-2xl font-playfair text-[#67AE6E] mb-6">{pkg.price}</p>
                   <a 
                     href={pkg.pdf}
-                    className="inline-block bg-[#328E6E] text-white px-6 py-3 rounded-full hover:bg-[#67AE6E] transition-colors duration-300 shadow-md hover:shadow-lg"
+                    className="inline-block bg-[#A1D6B2] text-white px-6 py-3 rounded-full hover:bg-[#67AE6E] transition-colors duration-300 shadow-md hover:shadow-lg"
                     download
                   >
                     Download Details
@@ -192,7 +192,7 @@ function Packages() {
           <motion.h2
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            className="text-3xl font-playfair text-[#328E6E] mb-8 drop-shadow-md"
+            className="text-3xl font-playfair text-[#A1D6B2] mb-8 drop-shadow-md"
           >
             Engagement Packages
           </motion.h2>
@@ -214,12 +214,12 @@ function Packages() {
                   />
                 </div>
                 <div className="p-8">
-                  <h3 className="text-2xl font-playfair text-[#328E6E] mb-4">{pkg.name}</h3>
+                  <h3 className="text-2xl font-playfair text-[#A1D6B2] mb-4">{pkg.name}</h3>
                   <p className="text-gray-600 mb-4 min-h-[60px]">{pkg.description}</p>
                   <p className="text-2xl font-playfair text-[#67AE6E] mb-6">{pkg.price}</p>
                   <a 
                     href={pkg.pdf}
-                    className="inline-block bg-[#328E6E] text-white px-6 py-3 rounded-full hover:bg-[#67AE6E] transition-colors duration-300 shadow-md hover:shadow-lg"
+                    className="inline-block bg-[#A1D6B2] text-white px-6 py-3 rounded-full hover:bg-[#67AE6E] transition-colors duration-300 shadow-md hover:shadow-lg"
                     download
                   >
                     Download Details
@@ -235,7 +235,7 @@ function Packages() {
           <motion.h2
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            className="text-3xl font-playfair text-[#328E6E] mb-8 drop-shadow-md"
+            className="text-3xl font-playfair text-[#A1D6B2] mb-8 drop-shadow-md"
           >
             Photography Packages
           </motion.h2>
@@ -257,12 +257,12 @@ function Packages() {
                   />
                 </div>
                 <div className="p-8">
-                  <h3 className="text-2xl font-playfair text-[#328E6E] mb-4">{pkg.name}</h3>
+                  <h3 className="text-2xl font-playfair text-[#A1D6B2] mb-4">{pkg.name}</h3>
                   <p className="text-gray-600 mb-4 min-h-[60px]">{pkg.description}</p>
                   <p className="text-2xl font-playfair text-[#67AE6E] mb-6">{pkg.price}</p>
                   <a 
                     href={pkg.pdf}
-                    className="inline-block bg-[#328E6E] text-white px-6 py-3 rounded-full hover:bg-[#67AE6E] transition-colors duration-300 shadow-md hover:shadow-lg"
+                    className="inline-block bg-[#A1D6B2] text-white px-6 py-3 rounded-full hover:bg-[#67AE6E] transition-colors duration-300 shadow-md hover:shadow-lg"
                     download
                   >
                     Download Details

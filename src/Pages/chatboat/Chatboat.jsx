@@ -74,7 +74,7 @@ function Chatboat() {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={toggleChat}
-        className="bg-gradient-to-r from-[#328E6E] to-[#67AE6E] text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+        className="bg-gradient-to-r from-[#A1D6B2] to-[#67AE6E] text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
       >
         {!showChat ? (
           <svg xmlns="http://www.w3.org/2000/svg" className="w-7 h-7" viewBox="0 0 24 24" fill="currentColor">
@@ -95,7 +95,7 @@ function Chatboat() {
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             className="absolute bottom-16 md:right-0 right-[0px]  md:w-96 w-[350px] bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100"
           >
-            <div className="p-6 bg-gradient-to-r from-[#328E6E] to-[#67AE6E] text-white rounded-t-xl flex justify-between items-center">
+            <div className="p-6 bg-gradient-to-r from-[#A1D6B2] to-[#67AE6E] text-white rounded-t-xl flex justify-between items-center">
               <div>
                 <h3 className="font-bold text-xl">LUVIT WEDS Chat</h3>
                 <p className="text-sm opacity-90">Find Your Perfect Package</p>
@@ -119,7 +119,7 @@ function Chatboat() {
                         onClick={() => handleOptionClick(option)}
                         className="w-full p-4 text-left rounded-xl bg-white shadow-sm hover:shadow-md border border-gray-100 transition-all duration-300"
                       >
-                        <span className="text-lg font-semibold text-[#328E6E]">{option.name}</span>
+                        <span className="text-lg font-semibold text-[#A1D6B2]">{option.name}</span>
                       </motion.button>
                     ))}
                   </div>
@@ -128,7 +128,7 @@ function Chatboat() {
                 <>
                   <button 
                     onClick={() => setShowPackages(false)}
-                    className="mb-6 text-[#328E6E] hover:text-[#67AE6E] font-medium flex items-center gap-2"
+                    className="mb-6 text-[#A1D6B2] hover:text-[#67AE6E] font-medium flex items-center gap-2"
                   >
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -146,7 +146,7 @@ function Chatboat() {
                         <span className="font-medium text-gray-700">{pkg.name}</span>
                         <button
                           onClick={() => handleDownload(pkg.pdf)}
-                          className="text-[#328E6E] hover:text-[#67AE6E] flex items-center gap-2"
+                          className="text-[#A1D6B2] hover:text-[#67AE6E] flex items-center gap-2"
                         >
                           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />

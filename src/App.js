@@ -9,6 +9,7 @@ import Navbar from './Pages/NavBar/Navbar';
 import Chatboat from './Pages/chatboat/Chatboat';
 import Test from './Pages/Test/Test';
 import { Analytics } from "@vercel/analytics/react"
+import Footer from './Pages/Footer/Footer';
 function App() {
   return (
     <div className="App">
@@ -24,6 +25,7 @@ function App() {
         <Route path="/our-team" element={<OurTeam />} />
         <Route path="/about" element={<About />} />
       </Routes>
+      <Footer/>
       <Analytics />
 
     </div>
