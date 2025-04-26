@@ -43,7 +43,7 @@ function Navbar() {
             className="flex items-center cursor-pointer"
           >
      
-            <img src={Logo} alt="" className='md:w-24 w-28 md:h-10 h-10'/>
+            <img src={Logo} alt="" className='md:w-24 w-24 md:h-10 h-10'/>
    
           </motion.div>
 
