@@ -56,7 +56,7 @@ function Chatboat() {
   }
 
   const handleWhatsApp = () => {
-    window.open('https://wa.me/8075803278', '_blank')
+    window.open('https://wa.me/+918075803278', '_blank')
   }
 
   const handleDownload = (pdf) => {
