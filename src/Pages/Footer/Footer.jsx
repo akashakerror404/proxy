@@ -43,7 +43,7 @@ const Footer = () => {
   </p>
 
   <div className="mt-3 space-y-1 text-sm text-gray-300 font-montserrat">
-    <p>📍 Bus stand, M S complex .New, Koyilandy, Kerala 673305</p>
+    <p>📍 M S complex , Bus stand New - Koyilandy, Kerala 673305</p>
     <p>📞 +91 80758 03278</p>
     <a 
       href="https://g.co/kgs/YFPY7aD" 
