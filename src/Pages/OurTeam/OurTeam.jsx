@@ -29,12 +29,21 @@ function OurTeam() {
 
  
     {
-      name: "Hemanth",
-      role: "Wedding & Celebrity Photographer",
-      image: OUR_TEAM7,
-      description: "Avinsh is renowned for his expertise in wedding, celebrity, and model shoots, blending artistic flair with professional precision. His lens captures glamour, grace, and unforgettable moments.",
-      specialties: ["Wedding Photography", "Celebrity Shoots", "Model Portfolio"]
+      name: "Sujay C Nair",
+      role: "Cinematographer",
+      image: OUR_TEAM3,
+      description: "Sujay C Nair is an expert cinematographer, capturing breathtaking visuals and creating compelling cinematic experiences with every frame.",
+      specialties: ["Cinematography", "Film Production", "Lighting", "Camera Techniques"]
     },
+    {
+      name: "Divya",
+      role: "Color Grading Specialist",
+      image: OUR_TEAM4,
+      description: "Divya is a skilled color grading specialist, enhancing visuals with a keen eye for color balance and mood, ensuring every shot is visually stunning.",
+      specialties: ["Color Grading", "Post-Production", "Visual Effects", "Cinematic Look"]
+    }
+    
+    
    
   ];
 

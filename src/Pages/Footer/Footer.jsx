@@ -43,10 +43,14 @@ const Footer = () => {
   </p>
 
   <div className="mt-3 space-y-1 text-sm text-gray-300 font-montserrat">
-    <p>📍 M S complex , Bus stand New - Koyilandy, Kerala 673305</p>
-    <p>📞 +91 80758 03278</p>
+    <p>📍 M S complex , Bus stand New-Koyilandy, Kerala 673305</p>
+    <p>
+  <a href="tel:+918075803278" className="font-playfair font-semibold hover:text-[#E1EEBC] transition-colors">
+    📞 +91 80758 03278
+  </a>
+</p>
     <a 
-      href="https://g.co/kgs/YFPY7aD" 
+      href="https://www.google.com/maps/place/PROXY+WEDDING+COMPANY/data=!4m2!3m1!1s0x0:0x407ab214b56a9c77?sa=X&ved=1t:2428&ictx=111" 
       target="_blank" 
       rel="noopener noreferrer" 
       className="text-[#E1EEBC] hover:underline block pt-1"
