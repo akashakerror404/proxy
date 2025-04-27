@@ -56,7 +56,7 @@ function Chatboat() {
   }
 
   const handleWhatsApp = () => {
-    window.open('https://wa.me/7025784463', '_blank')
+    window.open('https://wa.me/8075803278', '_blank')
   }
 
   const handleDownload = (pdf) => {
@@ -97,7 +97,7 @@ function Chatboat() {
           >
             <div className="p-6 bg-gradient-to-r from-[#A1D6B2] to-[#67AE6E] text-white rounded-t-xl flex justify-between items-center">
               <div>
-                <h3 className="font-bold text-xl">LUVIT WEDS Chat</h3>
+                <h3 className="font-bold text-xl">PROXY WEDDING  Chat</h3>
                 <p className="text-sm opacity-90">Find Your Perfect Package</p>
               </div>
               <button onClick={toggleChat} className="text-white hover:text-gray-200 transition-colors">

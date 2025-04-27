@@ -2,68 +2,102 @@ import React from 'react'
 
 function About() {
   return (
-    <div className="min-h-screen bg-white py-16 px-4 sm:px-6 lg:px-8">
-      <div className="text-center mb-16">
-        <h1 className="text-4xl font-extrabold text-[#A1D6B2] sm:text-5xl md:text-6xl">
-          Welcome to <span className="text-[#67AE6E] hover:text-[#A1D6B2] transition-colors duration-300">LUVIT WEDS</span>
-        </h1>
-        <p className="mt-3 max-w-2xl mx-auto text-xl text-[#A1D6B2] sm:mt-4">
-          Capturing Your Love Story, One Frame at a Time
-        </p>
-      </div>
-      
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300 border border-[#E1EEBC] lg:col-span-2">
-            <h2 className="text-2xl font-bold text-[#A1D6B2] mb-4">Who We Are</h2>
-            <p className="text-[#67AE6E]">Based in the beautiful city of Calicut, Kerala, we are a passionate team of wedding photographers dedicated to capturing your precious moments. With our roots deeply embedded in Kerala's rich cultural heritage, we bring a unique perspective to every wedding we photograph.</p>
+    <div className="min-h-screen bg-[#FAFAFA] py-16 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto">
+        {/* Header Section */}
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-light text-[#3A4D39] mb-4">
+            About <span className="font-medium text-[#67AE6E]">PROXY WEDDING</span>
+          </h1>
+          <div className="w-24 h-1 bg-[#A1D6B2] mx-auto mb-6"></div>
+          <p className="text-lg text-[#5A7D5E] max-w-2xl mx-auto">
+            Capturing the essence of your love story through timeless photography
+          </p>
+        </div>
+
+        {/* Main Content */}
+        <div className="space-y-12">
+          {/* Our Story */}
+          <div className="bg-white p-8 rounded-lg shadow-sm border-l-4 border-[#A1D6B2]">
+            <h2 className="text-2xl font-medium text-[#3A4D39] mb-4">Our Story</h2>
+            <p className="text-[#5A7D5E] leading-relaxed">
+              Founded in 2011, PROXY WEDDING began as a small team of passionate photographers in Kerala. 
+              Today, we've grown into a premier wedding photography service, documenting love stories across 
+              India and internationally. Our journey reflects our commitment to artistic excellence and 
+              authentic storytelling.
+            </p>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300 border border-[#E1EEBC]">
-            <h2 className="text-2xl font-bold text-[#A1D6B2] mb-4">Our Journey</h2>
-            <p className="text-[#67AE6E]">From the serene backwaters of Kerala to destinations worldwide, we've had the privilege of documenting countless love stories. Our team combines traditional values with contemporary photography techniques to create timeless memories.</p>
-          </div>
-
-          <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300 border border-[#E1EEBC] lg:col-span-2">
-            <h2 className="text-2xl font-bold text-[#A1D6B2] mb-4">Why Choose Us</h2>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-[#67AE6E]">
-              <li className="flex items-center transform hover:translate-x-2 transition-transform duration-300">
-                <svg className="h-6 w-6 text-[#90C67C] mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
-                </svg>
-                Expert team with years of experience
+          {/* Our Approach */}
+          <div className="bg-white p-8 rounded-lg shadow-sm border-l-4 border-[#67AE6E]">
+            <h2 className="text-2xl font-medium text-[#3A4D39] mb-4">Our Approach</h2>
+            <p className="text-[#5A7D5E] leading-relaxed mb-6">
+              We believe wedding photography should be as unique as the couple we're photographing. 
+              Our approach combines:
+            </p>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-[#5A7D5E]">
+              <li className="flex items-start">
+                <span className="text-[#67AE6E] mr-2">•</span>
+                <span>Documentary-style candid coverage</span>
               </li>
-              <li className="flex items-center transform hover:translate-x-2 transition-transform duration-300">
-                <svg className="h-6 w-6 text-[#90C67C] mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
-                </svg>
-                International wedding photography experience
+              <li className="flex items-start">
+                <span className="text-[#67AE6E] mr-2">•</span>
+                <span>Artistic portrait sessions</span>
               </li>
-              <li className="flex items-center transform hover:translate-x-2 transition-transform duration-300">
-                <svg className="h-6 w-6 text-[#90C67C] mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
-                </svg>
-                Understanding of diverse cultural traditions
+              <li className="flex items-start">
+                <span className="text-[#67AE6E] mr-2">•</span>
+                <span>Attention to cultural details</span>
               </li>
-              <li className="flex items-center transform hover:translate-x-2 transition-transform duration-300">
-                <svg className="h-6 w-6 text-[#90C67C] mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
-                </svg>
-                State-of-the-art photography equipment
-              </li>
-              <li className="flex items-center transform hover:translate-x-2 transition-transform duration-300">
-                <svg className="h-6 w-6 text-[#90C67C] mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
-                </svg>
-                Personalized attention to every client
+              <li className="flex items-start">
+                <span className="text-[#67AE6E] mr-2">•</span>
+                <span>Discreet professional presence</span>
               </li>
             </ul>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300 border border-[#E1EEBC]">
-            <h2 className="text-2xl font-bold text-[#A1D6B2] mb-4">Our Commitment</h2>
-            <p className="text-[#67AE6E]">We believe every wedding is unique and deserves to be captured in its full glory. Whether it's a traditional Kerala wedding or a destination wedding abroad, we ensure that every precious moment is preserved for generations to come.</p>
+          {/* Why Choose Us */}
+          <div className="bg-[#F5F9F5] p-8 rounded-lg">
+            <h2 className="text-2xl font-medium text-[#3A4D39] mb-4">Why Choose PROXY WEDDING</h2>
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-lg font-medium text-[#67AE6E] mb-2">Experience</h3>
+                <p className="text-[#5A7D5E]">
+                  With over 500 weddings photographed, our team brings expertise in handling all types of 
+                  ceremonies, from intimate gatherings to grand celebrations.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-lg font-medium text-[#67AE6E] mb-2">Quality</h3>
+                <p className="text-[#5A7D5E]">
+                  We use only professional-grade equipment and deliver images with meticulous attention to 
+                  color grading and retouching.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-lg font-medium text-[#67AE6E] mb-2">Personal Service</h3>
+                <p className="text-[#5A7D5E]">
+                  Each couple receives personalized attention from consultation through final delivery, 
+                  ensuring your vision is perfectly captured.
+                </p>
+              </div>
+            </div>
           </div>
+
+          {/* Testimonial */}
+          <div className="bg-white p-8 rounded-lg shadow-sm border border-[#E1EEBC]">
+            <blockquote className="text-lg italic text-[#5A7D5E] mb-4">
+              "PROXY WEDDING gave us not just photographs, but beautiful memories we can revisit forever. 
+              Their ability to capture emotions is truly remarkable."
+            </blockquote>
+            <p className="text-[#67AE6E] font-medium">— Ananya & Rohit, Bangalore</p>
+          </div>
+        </div>
+
+        {/* Footer Note */}
+        <div className="mt-16 text-center">
+          <p className="text-[#5A7D5E]">
+            Ready to document your love story? <span className="text-[#67AE6E] font-medium">Get in touch</span> with our team today.
+          </p>
         </div>
       </div>
     </div>

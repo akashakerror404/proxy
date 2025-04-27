@@ -13,7 +13,7 @@ import ENGAGEMENTDIAMOND from '../../assets/PACKAGES/ENGAGEMENT/DIAMOND.pdf'
 import ENGAGEMENTGOLD from '../../assets/PACKAGES/ENGAGEMENT/GOLD.pdf'
 import eng1 from '../../assets/GALLERY/SECTION_TWO/sectiontwo (88).jpg';
 import eng2 from '../../assets/GALLERY/SECTION_TWO/sectiontwo (60).jpg'
-import eng3 from '../../assets/GALLERY/SECTION_TWO/sectiontwo (111).jpg'
+import eng3 from '../../assets/GALLERY/SECTION_TWO/sectiontwo (99).jpg'
 
 
 

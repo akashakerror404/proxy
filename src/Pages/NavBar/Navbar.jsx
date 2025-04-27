@@ -43,7 +43,7 @@ function Navbar() {
             className="flex items-center cursor-pointer"
           >
      
-            <img src={Logo} alt="" className='md:w-24 w-24 md:h-10 h-10'/>
+            <img src={Logo} alt="" className='md:w-24 w-24 md:h-10 h-8'/>
    
           </motion.div>
 
@@ -73,7 +73,7 @@ function Navbar() {
           <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            href="tel:+919745005215"
+            href="tel:+918075803278"
             className="ml-4 px-6 py-2 bg-gradient-to-r from-[#328E6E] to-[#67AE6E] text-white rounded-full font-montserrat shadow-lg hover:shadow-xl transition-all duration-300 block text-center"
           >
             Connect
@@ -160,15 +160,15 @@ function Navbar() {
               
               {/* Menu Footer */}
               <div className="px-5 py-3 border-t border-white/20 bg-white/50">
-  <motion.a
-    whileHover={{ scale: 1.03 }}
-    whileTap={{ scale: 0.97 }}
-    href="tel:+919745005215" // <- this makes a direct call
-    className="w-full block text-center py-2 bg-gradient-to-r from-[#328E6E] to-[#67AE6E] text-white rounded-lg font-medium shadow-md"
-  >
-    Connect
-  </motion.a>
-</div>
+                <motion.a
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                  href="tel:+918075803278" // <- this makes a direct call
+                  className="w-full block text-center py-2 bg-gradient-to-r from-[#328E6E] to-[#67AE6E] text-white rounded-lg font-medium shadow-md"
+                >
+                  Connect
+                </motion.a>
+              </div>
 
             </motion.div>
           </>

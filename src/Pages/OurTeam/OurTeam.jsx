@@ -8,70 +8,35 @@ import OUR_TEAM5 from '../../assets/OUR_TEAM/OUR_TEAM5.jpg';
 import OUR_TEAM6 from '../../assets/OUR_TEAM/OUR_TEAM6.jpg';
 import OUR_TEAM7 from '../../assets/OUR_TEAM/OUR_TEAM7.jpg';
 
-
-
 function OurTeam() {
-  const teamMembers = [
+  const founder = {
+    name: "Pratheesh Prakash",
+    role: "Founder & Creative Director",
+    image: OUR_TEAM1,
+    description: "With over a decade of experience in photography and videography, Pratheesh Prakash founded our studio with a vision to create timeless visual stories. His expertise spans across wedding, commercial, and artistic photography, bringing a unique creative perspective to every project.",
+    specialties: ["Photography", "Videography", "Creative Direction", "Post-Production", "Brand Storytelling"]
+  };
 
+  const teamMembers = [
     {
-      name: "Sujil",
-      role: "Photographer",
+      name: "Suil Das",
+      role: "Photographer, Videographer & Color Grade Specialist",
       image: OUR_TEAM2,
-      description: "Dinoop specializes in product photography and ad shoots, delivering sharp visuals that elevate brand stories with creative precision.",
-      specialties: ["Product Photography", "Ad Shoots", "Creative Lighting"]
+      description: "Suil Das is a pillar of Proxy Weddings, specializing in photography, videography, and color grading, creating timeless moments with exceptional craftsmanship.",
+      specialties: ["Photography", "Videography", "Color Grading", "Proxy Wedding Specialist"]
     },
-    {
-      name: "Akash Ak",
-      role: "Photographer",
-      image: OUR_TEAM4,
-      description: "Akash brings unmatched passion and precision to every event he captures, having covered over 150 weddings and turning special moments into timeless memories.",
-      specialties: ["Wedding Photography", "Creative Portraits", "Fashion", "Event Coverage", "Portrait Photography"]
-    }
     
-    ,
-    
+
+ 
     {
-      name: "Asnayin",
-      role: "Wedding Specialist",
-      image: OUR_TEAM3, // Replace with the correct image if needed
-      description: "Asnayin is passionate about capturing the beauty, joy, and emotions of weddings. With a creative approach and attention to detail, she ensures every moment is preserved with elegance.",
-      specialties: ["Wedding Photography", "Candid Moments", "Pre-Wedding Shoots"]
-    }
-    ,
-    {
-      name: "Jayeesh",
-      role: "Wedding Specialist",
-      image: OUR_TEAM5, // Replace with the correct image if needed
-      description: "Jayeesh is a dedicated wedding specialist and the main constant at all our wedding events. His deep understanding of ceremonies and eye for emotion ensures every moment is beautifully documented.",
-      specialties: ["Wedding Photography", "Traditional Ceremonies", "Event Coverage"]
-    }
-    ,
-    {
-      name: "Sreeraj",
-      role: "Photographer & Video Editor",
-      image: OUR_TEAM1, // Replace with the correct image if needed
-      description: "Sreeraj combines his skills in photography and video editing to craft visually compelling stories. From capturing the shot to perfecting the final edit, he delivers high-quality visual content every time.",
-      specialties: ["Photography", "Video Editing", "Post-Production"]
-    },
-    {
-      name: "Avinsh",
+      name: "Hemanth",
       role: "Wedding & Celebrity Photographer",
-      image: OUR_TEAM7, // Replace with the correct image if needed
+      image: OUR_TEAM7,
       description: "Avinsh is renowned for his expertise in wedding, celebrity, and model shoots, blending artistic flair with professional precision. His lens captures glamour, grace, and unforgettable moments.",
       specialties: ["Wedding Photography", "Celebrity Shoots", "Model Portfolio"]
     },
-    
-    {
-      name: "Jithin Raj",
-      role: "Wedding Photographer",
-      image: OUR_TEAM6, // Replace with the correct image if needed
-      description: "Jithin Raj specializes in wedding photography, capturing timeless moments with a blend of elegance and emotion. His work tells heartfelt stories that couples cherish forever.",
-      specialties: ["Wedding Photography", "Candid Shots", "Couple Portraits"]
-    },
-
-    
-
-  ]
+   
+  ];
 
   return (
     <div className="min-h-screen bg-gray-50 py-20 px-4 sm:px-6 lg:px-8">
@@ -81,41 +46,92 @@ function OurTeam() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl font-playfair text-[#A1D6B2] mb-4">Meet Our Photography Team</h1>
+          <h1 className="text-4xl font-playfair text-[#A1D6B2] mb-4">Our Creative Family</h1>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Our talented team of photographers and videographers are passionate about capturing your precious moments in the most beautiful way possible.
+            Meet the passionate artists behind the lens who transform moments into lasting memories
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Founder Section */}
+        <div className="mb-20">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            className="bg-white rounded-2xl shadow-xl overflow-hidden max-w-4xl mx-auto"
+          >
+            <div className="md:flex">
+              <div className="md:w-1/3 h-96 md:h-auto">
+                <img 
+                  src={founder.image}
+                  alt={founder.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-8 md:w-2/3">
+                <div className="uppercase tracking-wide text-sm text-[#67AE6E] font-semibold mb-1">Visionary</div>
+                <h2 className="text-3xl font-playfair text-[#A1D6B2] mb-2">{founder.name}</h2>
+                <p className="text-gray-500 italic mb-6">{founder.role}</p>
+                <p className="text-gray-600 mb-6">{founder.description}</p>
+                <div>
+                  <h4 className="text-sm font-semibold text-gray-500 mb-3">SPECIALTIES</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {founder.specialties.map((specialty, i) => (
+                      <span 
+                        key={i}
+                        className="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm text-gray-600"
+                      >
+                        {specialty}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Team Members */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-playfair text-[#A1D6B2] mb-4">The Talented Team</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            Our dedicated professionals who bring creativity and technical excellence to every project
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {teamMembers.map((member, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.2 }}
-              className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300"
+              transition={{ delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
             >
               <div className="h-64 overflow-hidden">
                 <img 
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-playfair text-[#A1D6B2] mb-2">{member.name}</h3>
+                <h3 className="text-xl font-playfair text-[#A1D6B2] mb-1">{member.name}</h3>
                 <p className="text-[#67AE6E] font-medium mb-3">{member.role}</p>
                 <p className="text-gray-600 text-sm mb-4">{member.description}</p>
-                <div className="space-y-2">
-                  {member.specialties.map((specialty, i) => (
-                    <span 
-                      key={i}
-                      className="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm text-gray-600 mr-2 mb-2"
-                    >
-                      {specialty}
-                    </span>
-                  ))}
+                <div>
+                  <h4 className="text-xs font-semibold text-gray-400 mb-2">EXPERTISE</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {member.specialties.map((specialty, i) => (
+                      <span 
+                        key={i}
+                        className="inline-block bg-gray-100 rounded-full px-3 py-1 text-xs text-gray-600"
+                      >
+                        {specialty}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </motion.div>

@@ -29,7 +29,6 @@ import TESTIMONIALS01 from '../../assets/TESTIMONIALS/TESTIMONIALS-01.jpg';
 import TESTIMONIALS02 from '../../assets/TESTIMONIALS/TESTIMONIALS-02.jpg';
 import TESTIMONIALS03 from '../../assets/TESTIMONIALS/TESTIMONIALS-03.jpg';
 import TESTIMONIALS04 from '../../assets/TESTIMONIALS/TESTIMONIALS-04.jpg';
-import Test from '../Test/Test';
 
 const HERO_IMAGES = [hero1,hero2,hero3,hero4,hero5,hero6,hero7,]
 const HERO_IMAGESMOBILE = [hero1mobile,hero2mobile,hero3mobile,hero4mobile,hero5mobile,hero6mobile,hero7mobile,]
@@ -83,7 +82,7 @@ function HomeHeader() {
 
   const stats = [
     { number: 530, label: "Weddings Planned", isPercentage: false },
-    { number: 25, label: "Years Experience", isPercentage: false },
+    { number: 16, label: "Years Experience", isPercentage: false },
     { number: 50, label: "Destinations", isPercentage: false },
     { number: 100, label: "Client Satisfaction", isPercentage: true }
   ];
