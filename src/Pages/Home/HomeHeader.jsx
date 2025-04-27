@@ -204,7 +204,7 @@ function HomeHeader() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="px-8 py-3 bg-[#A1D6B2] hover:bg-[#A1D6B2] text-white rounded-full font-montserrat transition-all duration-300 flex items-center gap-2"
-          onClick={() => navigate('/contact')}
+          onClick={() => navigate('/packages')}
         >
           Get Started
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
