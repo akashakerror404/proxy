@@ -19,7 +19,7 @@ function OurTeam() {
 
   const teamMembers = [
     {
-      name: "Suil Das",
+      name: "Sujil Das",
       role: "Photographer, Videographer & Color Grade Specialist",
       image: OUR_TEAM2,
       description: "Suil Das is a pillar of Proxy Weddings, specializing in photography, videography, and color grading, creating timeless moments with exceptional craftsmanship.",
@@ -36,12 +36,20 @@ function OurTeam() {
       specialties: ["Cinematography", "Film Production", "Lighting", "Camera Techniques"]
     },
     {
-      name: "Divya",
+      name: "Divya Maneesh",
       role: "Color Grading Specialist",
       image: OUR_TEAM4,
       description: "Divya is a skilled color grading specialist, enhancing visuals with a keen eye for color balance and mood, ensuring every shot is visually stunning.",
       specialties: ["Color Grading", "Post-Production", "Visual Effects", "Cinematic Look"]
+    },
+    {
+      name: "Abhisha Ashok",
+      role: "Album Designer",
+      image: OUR_TEAM5,  // (assuming you have a variable or import like OUR_TEAM6 for her photo)
+      description: "Abhisha is a talented album designer, crafting beautiful and memorable photo albums with creativity and attention to detail, turning moments into lasting treasures.",
+      specialties: ["Album Design", "Photo Editing", "Creative Layouts", "Storytelling"]
     }
+    
     
     
    

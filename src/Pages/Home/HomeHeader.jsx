@@ -37,15 +37,15 @@ const HERO_IMAGESMOBILE = [hero1mobile,hero2mobile,hero3mobile,hero4mobile,hero5
 const WEDDING_IMAGES = [wed01, wed02, wed03, wed04, wed05, wed06];
 const TESTIMONIALS = [
   {
-    name: 'Sudeesh & Rincy',
+    name: 'Abhinav & Abhirami',
     image: TESTIMONIALS01,
-    text: '"Our engagement was nothing short of perfect. From breathtaking décor to the magical atmosphere, every detail was flawlessly executed. Proxy Wedding didnt just plan our day — they created a masterpiece',
-    type: 'Engagement',
-    date: 'June 2024'
+    text: '"Our wedding was nothing short of perfect. From breathtaking décor to the magical atmosphere, every detail was flawlessly executed. Proxy Wedding didn\'t just plan our day — they created a masterpiece."',
+    type: 'Traditional Wedding',
+    date: ''
   },
   
   {
-    name: 'Rahul & Smaya',
+    name: 'Akshay &  karishma',
     image: TESTIMONIALS02,
     text: '"Our traditional wedding was a dream come true. Proxy Wedding beautifully blended rituals with elegance, creating a celebration that truly honored our roots. Every moment felt special and meaningful."',
     type: 'Traditional Wedding',

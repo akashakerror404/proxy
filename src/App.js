@@ -22,10 +22,10 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
+      {/* <Navbar /> */}
       <Chatboat />
       <Routes>
-        {/* <Route path="/" element={<Test />} /> */}
+        <Route path="/test" element={<Test />} />
         <Route path="/" element={<HomeHeader />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/packages" element={<Packages />} />
