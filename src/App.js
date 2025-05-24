@@ -13,16 +13,42 @@ import Footer from './Pages/Footer/Footer';
 import { useEffect } from 'react';
 
 function App() {
+  const siteIsDown = true; // Set to false when site is back online
   const location = useLocation();
 
   useEffect(() => {
-    // Scroll to the top whenever the route changes
     window.scrollTo(0, 0);
   }, [location]);
 
+  if (siteIsDown) {
+    return (
+      <div
+        style={{
+          height: "100vh",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          backgroundColor: "#fff3cd",
+          color: "#856404",
+          fontFamily: "Arial, sans-serif",
+          padding: "20px",
+          textAlign: "center"
+        }}
+      >
+        <h1 style={{ fontSize: "2rem", marginBottom: "1rem" }}>⚠️ Site Unavailable</h1>
+        <p style={{ fontSize: "1.1rem", maxWidth: "600px" }}>
+          Payment is pending for <strong>Proxy Wedding</strong>. The site is currently down .
+          <br />
+          Please check back later. We appreciate your understanding.
+        </p>
+      </div>
+    );
+  }
+
   return (
     <div className="App">
-      {/* <Navbar /> */}
+      <Navbar />
       <Chatboat />
       <Routes>
         <Route path="/test" element={<Test />} />
