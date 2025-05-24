@@ -38,7 +38,8 @@ function App() {
       >
         <h1 style={{ fontSize: "2rem", marginBottom: "1rem" }}>⚠️ Site Unavailable</h1>
         <p style={{ fontSize: "1.1rem", maxWidth: "600px" }}>
-          Payment is pending for <strong>Proxy Wedding</strong>. The site is currently down .
+          {/* Payment is pending for */}
+           <strong>Proxy Wedding</strong>. The site is currently down .
           <br />
           Please check back later. We appreciate your understanding.
         </p>
