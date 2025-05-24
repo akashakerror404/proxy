@@ -13,7 +13,7 @@ import Footer from './Pages/Footer/Footer';
 import { useEffect } from 'react';
 
 function App() {
-  const siteIsDown = false; 
+  const siteIsDown = true; 
   const location = useLocation();
 
   useEffect(() => {
