@@ -13,7 +13,7 @@ import Footer from './Pages/Footer/Footer';
 import { useEffect } from 'react';
 
 function App() {
-  const siteIsDown = true; // Set to false when site is back online
+  const siteIsDown = false; 
   const location = useLocation();
 
   useEffect(() => {
