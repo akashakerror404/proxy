@@ -13,15 +13,16 @@ import Footer from './Pages/Footer/Footer';
 import { useEffect } from 'react';
 
 function App() {
-  const siteIsDown = true; 
+  const siteIsDown = false; 
   const location = useLocation();
 
 
-  
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
 
+  
   if (siteIsDown) {
     return (
       <div
