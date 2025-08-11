@@ -145,7 +145,7 @@ function Packages() {
 
 
 
-        <section className="mb-20">
+        {/* <section className="mb-20">
           <motion.h2 
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -185,7 +185,7 @@ function Packages() {
               </motion.div>
             ))}
           </div>
-        </section>
+        </section> */}
 
         {/* Engagement Packages */}
         {/* <section className="mb-20">

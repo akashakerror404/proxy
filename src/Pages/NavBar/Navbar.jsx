@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import Logo from '../../assets/Logo/Main/Logo.png'
+import Logo from '../../assets/Logo/Main/Logo.png';
+import { IoCallOutline } from "react-icons/io5";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isCallMenuOpen, setIsCallMenuOpen] = useState(false); // For call options
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -42,9 +44,7 @@ function Navbar() {
             onClick={() => navigate('/')}
             className="flex items-center cursor-pointer"
           >
-     
             <img src={Logo} alt="" className='md:w-24 w-20 md:h-10 h-8'/>
-   
           </motion.div>
 
           {/* Desktop Menu */}
@@ -70,14 +70,41 @@ function Navbar() {
                 </Link>
               </motion.div>
             ))}
-          <motion.a
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            href="tel:+918075803278"
-            className="ml-4 px-6 py-2 bg-gradient-to-r from-[#328E6E] to-[#67AE6E] text-white rounded-full font-montserrat shadow-lg hover:shadow-xl transition-all duration-300 block text-center"
-          >
-            Connect
-          </motion.a>
+
+            {/* Connect Button */}
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setIsCallMenuOpen(!isCallMenuOpen)}
+              className="ml-4 px-6 py-2 bg-gradient-to-r from-[#328E6E] to-[#67AE6E] text-white rounded-full font-montserrat shadow-lg hover:shadow-xl transition-all duration-300 block text-center"
+            >
+              Connect
+            </motion.button>
+
+            {/* Call Options Dropdown */}
+            <AnimatePresence>
+              {isCallMenuOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  className="absolute mt-40 right-10 bg-white shadow-lg rounded-lg overflow-hidden z-50"
+                >
+                  <a
+                    href="tel:+918075803278"
+                    className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                  >
+                    📞 Call 80758 03278
+                  </a>
+                  <a
+                    href="tel:+919745005215"
+                    className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                  >
+                    📞 Call 97450 05215
+                  </a>
+                </motion.div>
+              )}
+            </AnimatePresence>
 
           </div>
 
@@ -158,16 +185,45 @@ function Navbar() {
                 ))}
               </div>
               
-              {/* Menu Footer */}
+              {/* Menu Footer with Call Options */}
               <div className="px-5 py-3 border-t border-white/20 bg-white/50">
-                <motion.a
+                <motion.button
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
-                  href="tel:+918075803278" // <- this makes a direct call
+                  onClick={() => setIsCallMenuOpen(!isCallMenuOpen)}
                   className="w-full block text-center py-2 bg-gradient-to-r from-[#328E6E] to-[#67AE6E] text-white rounded-lg font-medium shadow-md"
                 >
                   Connect
-                </motion.a>
+                </motion.button>
+
+                {/* Call options inside mobile menu */}
+             <AnimatePresence>
+  {isCallMenuOpen && (
+    <motion.div
+      initial={{ opacity: 0, y: -5 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -5 }}
+      className="mt-2 bg-white shadow-lg rounded-xl overflow-hidden border border-gray-200 w-56"
+    >
+      <a
+        href="tel:+918075803278"
+        className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-[#f5f9f7] transition-colors duration-200"
+      >
+        <IoCallOutline className="text-[#328E6E] text-lg" /> 
+        <span className="font-medium">80758 03278</span>
+      </a>
+      <div className="border-t border-gray-200"></div>
+      <a
+        href="tel:+919745005215"
+        className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-[#f5f9f7] transition-colors duration-200"
+      >
+        <IoCallOutline className="text-[#328E6E] text-lg" /> 
+        <span className="font-medium">97450 05215</span>
+      </a>
+    </motion.div>
+  )}
+</AnimatePresence>
+
               </div>
 
             </motion.div>

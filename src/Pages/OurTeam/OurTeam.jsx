@@ -7,6 +7,9 @@ import OUR_TEAM4 from '../../assets/OUR_TEAM/OUR_TEAM4.jpg';
 import OUR_TEAM5 from '../../assets/OUR_TEAM/OUR_TEAM5.jpg';
 import OUR_TEAM6 from '../../assets/OUR_TEAM/OUR_TEAM6.jpg';
 import OUR_TEAM7 from '../../assets/OUR_TEAM/OUR_TEAM7.jpg';
+import TEAM from '../../assets/OUR_TEAM/TEAM.jpg';
+import TEAM2 from '../../assets/OUR_TEAM/TEAM2.jpg';
+
 
 function OurTeam() {
   const founder = {
@@ -25,16 +28,10 @@ function OurTeam() {
       description: "Suil Das is a pillar of Proxy Weddings, specializing in photography, videography, and color grading, creating timeless moments with exceptional craftsmanship.",
       specialties: ["Photography", "Videography", "Color Grading", "Proxy Wedding Specialist"]
     },
-    
 
- 
-    {
-      name: "Sujay C Nair",
-      role: "Cinematographer",
-      image: OUR_TEAM3,
-      description: "Sujay C Nair is an expert cinematographer, capturing breathtaking visuals and creating compelling cinematic experiences with every frame.",
-      specialties: ["Cinematography", "Film Production", "Lighting", "Camera Techniques"]
-    },
+
+
+  
     {
       name: "Divya Maneesh",
       role: "Color Grading Specialist",
@@ -48,17 +45,97 @@ function OurTeam() {
       image: OUR_TEAM5,  // (assuming you have a variable or import like OUR_TEAM6 for her photo)
       description: "Abhisha is a talented album designer, crafting beautiful and memorable photo albums with creativity and attention to detail, turning moments into lasting treasures.",
       specialties: ["Album Design", "Photo Editing", "Creative Layouts", "Storytelling"]
-    }
-    
-    
-    
-   
+    },
+{
+  name: "Nishitha",
+  role: "Manager",
+  image: OUR_TEAM6, // update this to her actual image variable if different
+  description: "Nishitha is an experienced manager, leading the team with dedication, organization, and a clear vision to ensure smooth operations and exceptional results.",
+  specialties: ["Team Leadership", "Project Management", "Client Relations", "Strategic Planning"]
+},
+
+{
+  name: "Shinoop",
+  role: "Video Editor",
+  image: OUR_TEAM7, // update this to his actual image variable if different
+  description: "Shinoop is a skilled video editor, bringing stories to life through seamless transitions, creative effects, and precise cuts that capture emotions and engage viewers.",
+  specialties: ["Video Editing", "Color Grading", "Motion Graphics", "Storytelling"]
+}
+,
+      {
+      name: "Sujay C Nair",
+      role: "Cinematographer",
+      image: OUR_TEAM3,
+      description: "Sujay C Nair is an expert cinematographer, capturing breathtaking visuals and creating compelling cinematic experiences with every frame.",
+      specialties: ["Cinematography", "Film Production", "Lighting", "Camera Techniques"]
+    },
+
+
+
+
   ];
 
   return (
     <div className="min-h-screen bg-gray-50 py-20 px-4 sm:px-6 lg:px-8">
+      {/* <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="text-center mb-16"
+      >
+        <h1 className="text-4xl font-playfair text-[#A1D6B2] mb-4">Our Creative Family</h1>
+        <p className="text-gray-600 max-w-2xl mx-auto">
+          Meet the passionate artists behind the lens who transform moments into lasting memories
+        </p>
+      </motion.div> */}
+
+      <motion.section
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        className="max-w-7xl mx-auto mb-8"
+      >
+        <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+          <img
+            src={TEAM}
+            alt="Our Team Together"
+            className="hidden md:flex w-full h-auto max-h-[600px] object-cover"
+          />
+            <img
+            src={TEAM2}
+            alt="Our Team Together"
+            className="md:hidden w-full h-auto max-h-[600px] object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-8">
+            <div className="text-white ">
+              <div className='hidden md:flex'>
+                <h1 className=" text-sm md:text-5xl font-playfair mb-4">Our Creative Family</h1>
+
+              </div>
+              {/* <div className='md:hidden flex justify-center'>
+                <p className=" text-sm md:text-5xl ">Our Creative Family</p>
+
+
+              </div>
+              <div className='md:hidden flex pl-8'>
+                <p className='text-[10px] text-white'>
+                  Dedicated to telling your story with heart</p>
+
+
+              </div> */}
+              <div className='hidden md:flex'>
+                <p className="md:text-lg text-sm max-w-2xl opacity-90">
+                  A passionate collective of visual storytellers dedicated to capturing your most precious moments
+
+                </p>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </motion.section>
       <div className="max-w-7xl mx-auto">
-        <motion.div 
+        {/* <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
@@ -67,7 +144,7 @@ function OurTeam() {
           <p className="text-gray-600 max-w-2xl mx-auto">
             Meet the passionate artists behind the lens who transform moments into lasting memories
           </p>
-        </motion.div>
+        </motion.div> */}
 
         {/* Founder Section */}
         <div className="mb-20">
@@ -79,7 +156,7 @@ function OurTeam() {
           >
             <div className="md:flex">
               <div className="md:w-1/3 h-96 md:h-auto">
-                <img 
+                <img
                   src={founder.image}
                   alt={founder.name}
                   className="w-full h-full object-cover"
@@ -94,7 +171,7 @@ function OurTeam() {
                   <h4 className="text-sm font-semibold text-gray-500 mb-3">SPECIALTIES</h4>
                   <div className="flex flex-wrap gap-2">
                     {founder.specialties.map((specialty, i) => (
-                      <span 
+                      <span
                         key={i}
                         className="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm text-gray-600"
                       >
@@ -126,8 +203,8 @@ function OurTeam() {
               viewport={{ once: true }}
               className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
             >
-              <div className="h-64 overflow-hidden">
-                <img 
+              <div className="h-96 overflow-hidden">
+                <img
                   src={member.image}
                   alt={member.name}
                   className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
@@ -141,7 +218,7 @@ function OurTeam() {
                   <h4 className="text-xs font-semibold text-gray-400 mb-2">EXPERTISE</h4>
                   <div className="flex flex-wrap gap-2">
                     {member.specialties.map((specialty, i) => (
-                      <span 
+                      <span
                         key={i}
                         className="inline-block bg-gray-100 rounded-full px-3 py-1 text-xs text-gray-600"
                       >
