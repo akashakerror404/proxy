@@ -445,7 +445,7 @@ function HomeHeader() {
       </section>
 
       {/* New Contact Section */}
-      <section className="py-20 bg-[#A1D6B2]">
+      {/* <section className="py-20 bg-[#A1D6B2]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -490,7 +490,7 @@ function HomeHeader() {
             </form>
           </motion.div>
         </div>
-      </section>
+      </section> */}
     </div>
   )
 }
